@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta name="renderer" content="webkit">
+<link rel="dns-prefetch" href="https://s3.pstatp.com/">
+<link rel="dns-prefetch" href="https://s3a.pstatp.com/">
+<link rel="dns-prefetch" href="https://s3b.pstatp.com/">
+<link rel="dns-prefetch" href="https://p1.pstatp.com/">
+<link rel="dns-prefetch" href="https://p3.pstatp.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+<title>登录抖音短视频</title>
+<link rel="stylesheet" href="login_files/index.css">
+<script>
+	!function(e) {
+		function t(a) {
+			if (c[a])
+				return c[a].exports;
+			var o = c[a] = {
+				exports : {},
+				id : a,
+				loaded : !1
+			};
+			return e[a].call(o.exports, o, o.exports, t), o.loaded = !0,
+					o.exports
+		}
+		var a = window.webpackJsonp;
+		window.webpackJsonp = function(r, n) {
+			for (var p, f, s = 0, l = []; s < r.length; s++)
+				f = r[s], o[f] && l.push.apply(l, o[f]), o[f] = 0;
+			for (p in n)
+				Object.prototype.hasOwnProperty.call(n, p) && (e[p] = n[p]);
+			for (a && a(r, n); l.length;)
+				l.shift().call(null, t);
+			if (n[0])
+				return c[0] = 0, t(0)
+		};
+		var c = {}, o = {
+			0 : 0
+		};
+		t.e = function(e, a) {
+			if (0 === o[e])
+				return a.call(null, t);
+			if (void 0 !== o[e])
+				o[e].push(a);
+			else {
+				o[e] = [ a ];
+				var c = document.getElementsByTagName("head")[0], r = document
+						.createElement("script");
+				r.type = "text/javascript", r.charset = "utf-8", r.async = !0,
+						r.src = t.p + "static/js/" + e + "." + {
+							1 : "2c3cf93e8f1706df6c36",
+							2 : "655191000eca154385c9",
+							3 : "79154c38989007851ef6",
+							4 : "ac0b4fb10a22450628e6",
+							5 : "e32178aaee36ae0b9159",
+							6 : "9eaf1ce3285a9f6c8c09",
+							7 : "c38de99df42b3baef448",
+							8 : "f84802439dbaf972920c"
+						}[e] + ".js", c.appendChild(r)
+			}
+		}, t.m = e, t.c = c, t.p = "/toutiao/",
+				t.p = "//s3.pstatp.com/toutiao/"
+	}([]);
+</script>
+</head>
+<body>
+	<div class="base-login">
+		<h1 class="box-title">手机登录抖音短视频</h1>
+		<form class="form-wrap" th:action="@{~/login}">
+			<div class="input-field mobile">
+				<label for="mobile" class="yellow-text">+86</label>
+				<input id="telephone" name="telephone" placeholder="请输入抖音账号绑定手机号" type="text">
+			</div>
+			<div class="input-field captcha">
+				<label for="captcha">验证码</label>
+				<input id="captcha" placeholder="请输入验证码" type="text">
+				<div class="captcha-wrap">
+					<img
+						src="data:image/gif;base64,R0lGODlhagAeAIcAAAAAAAAARAAAiAAAzABEAABERABEiABEzACIAACIRACIiACIzADMAADMRADMiADMzADd3REREQAAVQAAmQAA3QBVAABVVQBMmQBJ3QCZAACZTACZmQCT3QDdAADdSQDdkwDungDu7iIiIgAAZgAAqgAA7gBmAABmZgBVqgBP7gCqAACqVQCqqgCe7gDuAADuTwD/VQD/qgD//zMzMwAAdwAAuwAA/wB3AAB3dwBduwBV/wC7AAC7XQC7uwCq/wD/AEQAREQAiEQAzEREAEREREREiEREzESIAESIRESIiESIzETMAETMRETMiETMzEQAAFUAAFUAVUwAmUkA3VVVAFVVVUxMmUlJ3UyZAEyZTEyZmUmT3UndAEndSUndk0nd3U/u7mYAAGYAZlUAqk8A7mZmAGZmZlVVqk9P7lWqAFWqVVWqqk+e7k/uAE/uT0/unlX/qlX//3cAAHcAd10Au1UA/3d3AHd3d11du1VV/127AF27XV27u1Wq/1X/AFX/VYgAiIgAzIhEAIhERIhEiIhEzIiIAIiIRIiIiIiIzIjMAIjMRIjMiIjMzIgAAIgARJkATJkAmZMA3ZlMAJlMTJlMmZNJ3ZmZAJmZTJmZmZOT3ZPdAJPdSZPdk5Pd3ZkAAKoAAKoAVaoAqp4A7qpVAKpVVapVqp5P7qqqAKqqVaqqqp6e7p7uAJ7uT57unp7u7qr//7sAALsAXbsAu6oA/7tdALtdXbtdu6pV/7u7ALu7Xbu7u6qq/6r/AKr/Var/qswAzMxEAMxERMxEiMxEzMyIAMyIRMyIiMyIzMzMAMzMRMzMiMzMzMwAAMwARMwAiN0Ak90A3d1JAN1JSd1Jk91J3d2TAN2TSd2Tk92T3d3dAN3dSd3dk93d3d0AAN0ASe4AT+4Anu4A7u5PAO5PT+5Pnu5P7u6eAO6eT+6enu6e7u7uAO7uT+7unu7u7u4AAP8AAP8AVf8Aqv8A//9VAP9VVf9Vqv9V//+qAP+qVf+qqv+q////AP//Vf//qv///ywAAAAAagAeAAAI//8EDiRY0OBBhAltLEw4cKENhw0FPpRY8R9Fixk1QrTI8SJDiR41jswI8eFJlCkxkrzI0uVLgiZhzqRZs6RNnDl17uRp0F3PnSpRAv23ykYeXkSVThQK8uUqXqvyLKUqsBuaPHlW0dSkKaqmn1Vj6uzW1R2vqTO1ukP6UmhJpzVXef0XtdtBd2ElrlrlTqTYiTmv8rKb5+7As3mO5tGk9bBBr2gTr3oMGOFZXnQbsu2LBiKaymiTdluFpvFWyJrKMkaqGLXlgu40LUbbNyHabrywln1dlBdbNGigRtU7cG1wylJ5VYYtUCpmwm0PkiZ8OmpagV7nfiXdeyBftr+zdv8r3ryudqxZ0ST9+28tY9HgJ1Km2zVqUshJ8z43f1C71qx+k2mgq+5Ca7zMDhMus6SQui+13IYDqz+D1qpNtzz8Iogz2Sg76x8NBRKuG8PcWy7DCrfCijLpPooLsAORgopE/L7LUKo8gkOKrbAaY6u1CJkrCqr1Mmwxphepqi2ryDQhiETW8OOsO4HYIm8usFSqC0fVHJyQQoIA5CtDsxAjDCqCcGtRN02kQiOxgpoaCkz3jAQQNLyK42y9NKUyCk6J3JlLupSaOxCqNvPK6Ey8rjrLyYowKw9MdyL8jaVJrQJtrkzpzKjTnLzzdFTEAGuK1KXag+tUopIEylVUESoJtCdVY111p4AAADs="
+						alt="" class="captcha">
+				</div>
+			</div>
+			<div class="input-field code">
+				<label for="code">短信验证</label>
+				<input id="code" name="code" placeholder="请输入短信验证码" type="text">
+				<span id="codeButton" class="send-code-btn yellow-text disable" onclick="getCode()">获取验证码</span>
+			</div>
+
+		<div class="action">
+			<span>
+				注册并登录即代表同意抖音
+				<a href="https://www.douyin.com/falcon/douyin_falcon/user_agreement/" target="_blank" class="yellow-text">用户服务协议</a>
+				和
+				<a href="https://www.douyin.com/falcon/douyin_falcon/privacy_agreement/" target="_blank" class="yellow-text">隐私政策</a>
+			</span>
+			<div th:text="${message}" style="color:red"></div>
+		</div>
+		<button type="submit" class="action-btn">登录</button>
+		</form>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" th:inline="javascript">
+	
+		function getCode(){
+			//隐藏自己
+			$("#codeButton").removeAttr("onclick");
+			//发送验证码
+			var telephone = $("#telephone").val();
+			alert(telephone);
+			$.post(
+				//action的地址
+				[[@{~/sms}]],
+				//提交的数据
+				{"telephone":telephone},
+				//回调函数
+				function(data)
+				{
+					
+				},
+				//数据格式
+				"json"
+			)
+			
+			
+			//延时几面显示,避免用户多次连续点击
+			setTimeout("fun(5)",1000);
+			
+		}
+		
+		
+		function fun(n){
+			if(n>0){
+				n--;
+				//修改文字html中的内容
+				document.getElementById("codeButton").innerHTML = "还剩："+n+"秒";
+				//每秒递归调用自己
+				setTimeout("fun("+ n +")",1000);
+			}else{
+				//倒计时已经结束
+				//显示自己
+				document.getElementById("codeButton").innerHTML = "获取验证码";
+				//添加click事件方法
+				$("#codeButton").attr("onclick","getCode();");
+			}
+		}
+	
+		var BASE_DATA = {
+			service : 'https://www.douyin.com/login?type=musician',
+			captcha : ''
+		};
+	</script>
+	<script type="text/javascript" src="login_files/vendor.js"></script>
+	<script type="text/javascript" src="login_files/index.js"></script>
+</body>
+</html>

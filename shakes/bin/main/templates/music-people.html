@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="music-people_files/push.js"></script>
+<script async="" src="music-people_files/analytics.js"></script>
+<script src="music-people_files/slardar.js"></script>
+<script>
+	window.Slardar && window.Slardar.install({
+		sampleRate : 1,
+		bid : 'douyin_web',
+		pid : 'musician_home',
+		ignoreAjax : [],
+		ignoreStatic : []
+	});
+</script>
+<title>抖音音乐人</title>
+<meta charset="utf-8">
+<meta http-equiv="”Cache-Control”" content="”no-transform”">
+<meta http-equiv="”Cache-Control”" content="”no-siteapp”">
+<meta name="baidu-site-verification" content="szjdG38sKy">
+<meta name="keywords" content="抖音看见音乐,看见音乐计划,抖音音乐人,原创音乐,看见音乐计划官网">
+<meta name="description" content="抖音看见音乐计划,你的音乐,我看得见">
+<link rel="shortcut icon" href="https://s3.bytecdn.cn/aweme/resource/web/static/image/logo/favicon_v2_7145ff0.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<link rel="dns-prefetch" href="https://s3.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3a.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3b.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s0.pstatp.com/">
+<link rel="dns-prefetch" href="https://s1.pstatp.com/">
+<link rel="dns-prefetch" href="https://s2.pstatp.com/">
+<meta name="viewport" content="width=device-width,initial-scale=0.6,user-scalable=0">
+<link rel="stylesheet" href="music-people_files/base_4a834a9.css">
+<link rel="stylesheet" href="music-people_files/jquery.css">
+<!--[if IE]><script src="//s3a.bytecdn.cn/aweme/resource/web/static/script/lib/fix-ie8_e8a0650.js"></script><![endif]-->
+<script src="music-people_files/core_1f49c51.js"></script>
+<script src="music-people_files/jquery.js"></script>
+<script src="music-people_files/lazyload.js"></script>
+<script>
+	window.PAGEVIEW_NAME = '/musician_home/';
+</script>
+<script>
+	// BA全局变量
+	var baAccount = window.AME_BA_ID || 'fe557d1f75199e';
+	var baevent = function() {
+	};
+
+	(function() {
+		var sampleRate = 100; // 采样比例，即上报量占总流量的百分比
+
+		!function(t, e, a, n, s, c) {
+			t.ToutiaoAnalyticsObject = s, t[s] = t[s] || function() {
+				(t[s].q = t[s].q || []).push(arguments)
+			}, t[s].t = 1 * new Date, t[s].s = c;
+			var i = e.createElement(a);
+			i.async = 1, i.src = n, e.getElementsByTagName("head")[0]
+					.appendChild(i)
+		}(window, document, "script",
+				"//s3.bytecdn.cn/ta/resource/v0/analytics.js", "ba");
+
+		ba('create', baAccount, {
+			'sampleRate' : sampleRate
+		});
+		ba('send', 'pageview');
+
+		baevent = function(category, action, label, value) {
+			console.log("ba:" + category + "," + action + "," + label);
+			if (category != 'event') {
+				ba('send', 'event', category, action, label,
+						typeof value !== 'undefined' ? value : 1);
+			}
+		};
+	})();
+</script>
+<script async="" src="music-people_files/analytics_002.js"></script>
+<script>
+	var gaAccount = window.AME_GA_ID || 'UA-75850242-4';
+
+	var _gaq = _gaq || [];
+	var gaqpush = function() {
+	};
+	var gaevent = function() {
+	};
+	var gapageview = function() {
+	};
+	var trackPV = gapageview;
+
+	var sampleRate = 20;
+
+	function initGA() {
+
+		if (sampleRate && gaAccount) {
+			window.onerror = function(message, file, line) {
+				var msg = message, f = file, l = line;
+				if (typeof message === 'object') {
+					msg = message.message;
+					f = message.fileName;
+					l = message.lineNumber;
+				}
+				var sFormattedMessage = '[' + f + ' (' + l + ')]' + msg;
+				window.gaevent ? gaevent('Exceptions', sFormattedMessage,
+						location.pathname + '::::' + navigator.userAgent) : '';
+			};
+
+			var test_channel = "", test_version = "", utm_source = "";
+
+			// var ua = navigator.userAgent;
+
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+
+			// Replace with your property ID.
+			ga('create', gaAccount, {
+				'sampleRate' : sampleRate
+			});
+
+			//Init GA Function
+			gapageview = function(pageName) {
+				ga('send', 'pageview', pageName);
+				console.log('ga:pageview', pageName);
+			};
+
+			gaqpush = function(ga_event, ga_label) {
+				gaevent('event', ga_event, ga_label);
+			};
+
+			gaevent = function(category, action, label, value) {
+				if (test_channel.indexOf(action) > -1)
+					label = label + test_version;
+				console.log("ga:" + category + "," + action + "," + label);
+				if (category != 'event') {
+					ga('send', 'event', category, action, label,
+							typeof value !== "undefined" ? value : 1);
+				}
+				if (typeof window.baevent == "function") {
+					baevent(category, action, label, value);
+				}
+			};
+
+			gapageview(window.PAGEVIEW_NAME);
+
+			$("html")
+					.on(
+							'click',
+							'[ga_event]',
+							function(e) {
+								var $this = $(this);
+								var ga_category = $this.attr('ga_category')
+										|| 'event';
+								var ga_event = $this.attr('ga_event');
+								var ga_label = $this.attr('ga_label');
+								gaevent(ga_category, ga_event, ga_label);
+								if ($this.is('a')) {
+									var href = $this.attr('href') || '', target = this.target;
+									if (!(href[0] === '#'
+											|| target === "_blank" || e
+											.isDefaultPrevented())) {
+										setTimeout(function() {
+											location.href = href
+										}, 400);
+										return false
+									}
+								}
+							});
+		}
+	}
+
+	initGA();
+</script>
+<link rel="stylesheet" href="music-people_files/index_db26f14.css">
+<link rel="stylesheet" href="music-people_files/index_eb57c76.css">
+</head>
+<body style="overflow: hidden; height: 100%;" class="fp-viewing-0">
+	<div class="main-content-block">
+		<div th:replace="~{fragments/header::header}"></div>
+		<div class="tips" id="tips">请复制链接，用电脑打开页面，成为抖音音乐人</div>
+		<div id="fullpage" class="fullpage-container fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px); transition: all 800ms ease 0s;">
+			<div class="section fp-section fp-table active fp-completely" id="section0" style="height: 910px;">
+				<div class="fp-tableCell" style="height: 910px;">
+					<div class="page-0 page" id="page0">
+						<div class="page-0-button-group">
+							<div class="page-0-header-title">
+								<img alt="抖音原创音乐人，看见音乐计划" src="music-people_files/page-1-title_8c7b323.png">
+							</div>
+							<div class="page-0-upload" id="uploadBtn">
+								<a href="#">
+									<img class="page-0-note" alt="音乐" src="music-people_files/note_e4af899.png">
+									<img alt="上传音乐" src="music-people_files/upload_a97fd1d.png">
+								</a>
+							</div>
+						</div>
+						<div class="page-0-footer">
+							<div class="page-0-title">
+								<div class="page-0-line page-0-line-l"></div>
+								<div class="page-0-txt">已入驻抖音音乐人</div>
+								<div class="page-0-line page-0-line-r"></div>
+							</div>
+							<div class="page-0-musician-container">
+								<div class="page-0-musician-group" id="musicianGroup" style="transition: transform 1s ease 0s; transform: translateX(-5778px);">
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/1_491ccad.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/1_491ccad.jpg&quot;);"></div>
+										<div class="page-0-nickname">金志文</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/63_794e555.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/63_794e555.jpg&quot;);"></div>
+										<div class="page-0-nickname">吉克隽逸</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/69_6408d77.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/69_6408d77.jpg&quot;);"></div>
+										<div class="page-0-nickname">Tizzy T</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/54_8d93189.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/54_8d93189.jpg&quot;);"></div>
+										<div class="page-0-nickname">白举纲</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/7_e2400d0.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/7_e2400d0.jpg&quot;);"></div>
+										<div class="page-0-nickname">李斯丹妮</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/71_efad62a.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/71_efad62a.jpg&quot;);"></div>
+										<div class="page-0-nickname">艾菲</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/5_18df1de.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/5_18df1de.jpg&quot;);"></div>
+										<div class="page-0-nickname">万妮达</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/24_1b3cacb.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/24_1b3cacb.jpg&quot;);"></div>
+										<div class="page-0-nickname">刘美麟</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/14_331fff3.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/14_331fff3.jpg&quot;);"></div>
+										<div class="page-0-nickname">阿肆</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/39_ae80033.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/39_ae80033.jpg&quot;);"></div>
+										<div class="page-0-nickname">于文文</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/57_6c4c5f0.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/57_6c4c5f0.jpg&quot;);"></div>
+										<div class="page-0-nickname">鬼卞</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/31_adfb8a2.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/31_adfb8a2.jpg&quot;);"></div>
+										<div class="page-0-nickname">孙八一</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/58_287c7c1.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/58_287c7c1.jpg&quot;);"></div>
+										<div class="page-0-nickname">李行亮</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/66_ca2b2fc.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/66_ca2b2fc.jpg&quot;);"></div>
+										<div class="page-0-nickname">牛奶咖啡</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/70_5fcc52c.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/70_5fcc52c.jpg&quot;);"></div>
+										<div class="page-0-nickname">打扰一下</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/60_e95dde3.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/60_e95dde3.jpg&quot;);"></div>
+										<div class="page-0-nickname">mr.miss</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/15_55b0ddd.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/15_55b0ddd.jpg&quot;);"></div>
+										<div class="page-0-nickname">敖犬</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/2_c82018c.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/2_c82018c.jpg&quot;);"></div>
+										<div class="page-0-nickname">2-DO</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/3_bf0e2c0.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/3_bf0e2c0.jpg&quot;);"></div>
+										<div class="page-0-nickname">庄心妍</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/4_b2da1aa.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/4_b2da1aa.jpg&quot;);"></div>
+										<div class="page-0-nickname">反光镜乐队</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/6_b211ca0.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/6_b211ca0.jpg&quot;);"></div>
+										<div class="page-0-nickname">南征北战</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/8_87e9234.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/8_87e9234.jpg&quot;);"></div>
+										<div class="page-0-nickname">徐云霄</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/9_bd233dd.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/9_bd233dd.jpg&quot;);"></div>
+										<div class="page-0-nickname">段林希</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/10_0614943.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/10_0614943.jpg&quot;);"></div>
+										<div class="page-0-nickname">许佳麟</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/11_a6d8183.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/11_a6d8183.jpg&quot;);"></div>
+										<div class="page-0-nickname">布偶乐队</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/12_cb38371.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/12_cb38371.jpg&quot;);"></div>
+										<div class="page-0-nickname">白光组合</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/13_b7cec37.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/13_b7cec37.jpg&quot;);"></div>
+										<div class="page-0-nickname">阿克江</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/16_3a189cd.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/16_3a189cd.jpg&quot;);"></div>
+										<div class="page-0-nickname">白天不亮</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/17_0fc2c57.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/17_0fc2c57.jpg&quot;);"></div>
+										<div class="page-0-nickname">东南</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/18_5ca5dff.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/18_5ca5dff.jpg&quot;);"></div>
+										<div class="page-0-nickname">房东的猫</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/19_e1eade7.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/19_e1eade7.jpg&quot;);"></div>
+										<div class="page-0-nickname">苟乃鹏</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/20_cf3d67f.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/20_cf3d67f.jpg&quot;);"></div>
+										<div class="page-0-nickname">果味VC乐队</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/21_165eb93.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/21_165eb93.jpg&quot;);"></div>
+										<div class="page-0-nickname">简迷离</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/22_f908c35.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/22_f908c35.jpg&quot;);"></div>
+										<div class="page-0-nickname">廖效浓</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/23_d2741c7.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/23_d2741c7.jpg&quot;);"></div>
+										<div class="page-0-nickname">刘锦泽</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/25_eefa0e3.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/25_eefa0e3.jpg&quot;);"></div>
+										<div class="page-0-nickname">刘润洁</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/26_ca03861.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/26_ca03861.jpg&quot;);"></div>
+										<div class="page-0-nickname">龙井说唱孙旭</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/27_eff3741.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/27_eff3741.jpg&quot;);"></div>
+										<div class="page-0-nickname">路壹Lu1</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/28_9f40c13.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/28_9f40c13.jpg&quot;);"></div>
+										<div class="page-0-nickname">罗艺恒</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/29_b20cfa2.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/29_b20cfa2.jpg&quot;);"></div>
+										<div class="page-0-nickname">裸儿</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/30_e2cc129.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/30_e2cc129.jpg&quot;);"></div>
+										<div class="page-0-nickname">那吾克热</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/32_20388b0.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/32_20388b0.jpg&quot;);"></div>
+										<div class="page-0-nickname">铁竹堂</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/33_a3d55dc.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/33_a3d55dc.jpg&quot;);"></div>
+										<div class="page-0-nickname">夏之禹</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/34_4f72cfa.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/34_4f72cfa.jpg&quot;);"></div>
+										<div class="page-0-nickname">新街口组合</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/35_d09f6e2.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/35_d09f6e2.jpg&quot;);"></div>
+										<div class="page-0-nickname">徐秉龙</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/36_061de88.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/36_061de88.jpg&quot;);"></div>
+										<div class="page-0-nickname">许钧</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/37_2d8b36f.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/37_2d8b36f.jpg&quot;);"></div>
+										<div class="page-0-nickname">许馨文</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/38_18e9d10.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/38_18e9d10.jpg&quot;);"></div>
+										<div class="page-0-nickname">耀乐团</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/40_ed637bb.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/40_ed637bb.jpg&quot;);"></div>
+										<div class="page-0-nickname">张歆雅</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/41_40b521e.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/41_40b521e.jpg&quot;);"></div>
+										<div class="page-0-nickname">赵晔</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/42_653d788.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/42_653d788.jpg&quot;);"></div>
+										<div class="page-0-nickname">周玥</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/43_9fbc632.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/43_9fbc632.jpg&quot;);"></div>
+										<div class="page-0-nickname">Alex Hong</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/44_f23eb50.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/44_f23eb50.jpg&quot;);"></div>
+										<div class="page-0-nickname">AY楊佬叁</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/45_52a6063.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/45_52a6063.jpg&quot;);"></div>
+										<div class="page-0-nickname">Cee</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/46_2b363ee.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/46_2b363ee.jpg&quot;);"></div>
+										<div class="page-0-nickname">Cloud Wang</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/47_d2e0d2f.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/47_d2e0d2f.jpg&quot;);"></div>
+										<div class="page-0-nickname">CNBALLER</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/48_3aa328e.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/48_3aa328e.jpg&quot;);"></div>
+										<div class="page-0-nickname">DJ Baker</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/49_b9b0b55.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/49_b9b0b55.jpg&quot;);"></div>
+										<div class="page-0-nickname">Dragon Pig</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/50_0e934a4.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/50_0e934a4.jpg&quot;);"></div>
+										<div class="page-0-nickname">Gold Chain</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/51_3621248.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/51_3621248.jpg&quot;);"></div>
+										<div class="page-0-nickname">LAMPHO</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/52_5cb61c1.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/52_5cb61c1.jpg&quot;);"></div>
+										<div class="page-0-nickname">OB03</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/53_d47b5bf.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/53_d47b5bf.jpg&quot;);"></div>
+										<div class="page-0-nickname">s3v3n.tang</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/55_345385a.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/55_345385a.jpg&quot;);"></div>
+										<div class="page-0-nickname">曹寅</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/56_ff5a3b3.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/56_ff5a3b3.jpg&quot;);"></div>
+										<div class="page-0-nickname">崔子格</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/59_d706855.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/59_d706855.jpg&quot;);"></div>
+										<div class="page-0-nickname">圈9</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/61_e200cf0.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/61_e200cf0.jpg&quot;);"></div>
+										<div class="page-0-nickname">草台乱唱</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/62_a609aaf.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/62_a609aaf.jpg&quot;);"></div>
+										<div class="page-0-nickname">毒药mars</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/64_b0c216c.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/64_b0c216c.jpg&quot;);"></div>
+										<div class="page-0-nickname">冷炫忱CURTIS</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/65_ccb4683.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/65_ccb4683.jpg&quot;);"></div>
+										<div class="page-0-nickname">孟凡明</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/67_b3c5757.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/67_b3c5757.jpg&quot;);"></div>
+										<div class="page-0-nickname">斯斯與帆</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/68_1439dd9.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/68_1439dd9.jpg&quot;);"></div>
+										<div class="page-0-nickname">王骞</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/72_21a5911.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/72_21a5911.jpg&quot;);"></div>
+										<div class="page-0-nickname">陈鸿宇</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/73_4ab21ea.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/73_4ab21ea.jpg&quot;);"></div>
+										<div class="page-0-nickname">鹿先森乐队</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/74_5afbcfb.jpg" style="background-image: url(&quot;//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/74_5afbcfb.jpg&quot;);"></div>
+										<div class="page-0-nickname">水木年华</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/75_886e8c2.jpg" style="background-image: url(&quot;//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/75_886e8c2.jpg&quot;);"></div>
+										<div class="page-0-nickname">徐梦圆</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/1_491ccad.jpg"></div>
+										<div class="page-0-nickname">金志文</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/63_794e555.jpg"></div>
+										<div class="page-0-nickname">吉克隽逸</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/69_6408d77.jpg"></div>
+										<div class="page-0-nickname">Tizzy T</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/54_8d93189.jpg"></div>
+										<div class="page-0-nickname">白举纲</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/7_e2400d0.jpg"></div>
+										<div class="page-0-nickname">李斯丹妮</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/71_efad62a.jpg"></div>
+										<div class="page-0-nickname">艾菲</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/5_18df1de.jpg"></div>
+										<div class="page-0-nickname">万妮达</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/24_1b3cacb.jpg"></div>
+										<div class="page-0-nickname">刘美麟</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/14_331fff3.jpg"></div>
+										<div class="page-0-nickname">阿肆</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/39_ae80033.jpg"></div>
+										<div class="page-0-nickname">于文文</div>
+									</div>
+
+									<div class="page-0-musician">
+										<div class="page-0-avatar page-lazy-load-avatar" data-src="//s3a.bytecdn.cn/aweme/resource/web/static/image/musician/KOL/57_6c4c5f0.jpg"></div>
+										<div class="page-0-nickname">鬼卞</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section fp-section fp-table" id="section1" style="height: 910px;">
+				<div class="fp-tableCell" style="height: 910px;">
+					<div class="page-1 page">
+						<div class="page-1-container">
+							<div class="page-1-header">
+								<img src="music-people_files/page-2-title_043f0c5.png" alt="丰富宣推资源">
+							</div>
+							<div class="page-1-content">
+								<div class="page-1-bg">
+									<div class="page-1-icon">
+										<img src="music-people_files/page-2-icon-1_214c59a.png">
+									</div>
+									<div class="page-1-primary">好内容让好音乐被看见</div>
+									<div class="page-1-secondary-1">抖音的用户们有千百种玩法和</div>
+									<div class="page-1-secondary-2">丰富的创意，实力演绎</div>
+									<div class="page-1-secondary-3">你的原创音乐</div>
+								</div>
+								<div class="page-1-bg">
+									<div class="page-1-icon">
+										<img src="music-people_files/page-2-icon-2_936f886.png">
+									</div>
+									<div class="page-1-primary">个性化分发推荐</div>
+									<div class="page-1-secondary-1">不管是成名已久，还是新人新作，</div>
+									<div class="page-1-secondary-2">抖音都会让你的原创音乐</div>
+									<div class="page-1-secondary-3">与伯乐相遇</div>
+								</div>
+								<div class="page-1-bg">
+									<div class="page-1-icon">
+										<img src="music-people_files/page-2-icon-3_04c3b49.png">
+									</div>
+									<div class="page-1-primary">全系产品推广渠道支持</div>
+									<div class="page-1-secondary-1">不仅是抖音，好的原创音乐将会</div>
+									<div class="page-1-secondary-2">根据风格及受众分发至</div>
+									<div class="page-1-secondary-3">头条全系产品</div>
+								</div>
+							</div>
+							<div class="page-1-footer">
+								<p>数万首原创音乐，都获得了上万使用量，抖音重新定义了音乐宣发时代2.0</p>
+								<p>我们会倾尽全力扶持中国原创音乐，助力音乐人 ，传播好音乐</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section fp-section fp-table" id="section2" style="height: 910px;">
+				<div class="fp-tableCell" style="height: 910px;">
+					<div class="page-2 page">
+						<div class="page-2-container">
+							<div class="page-2-top">
+								<div class="page-2-header">
+									<img class="page-2-title" src="music-people_files/page-3-title-1_ca3c6fe.png" alt="行业指导机构">
+								</div>
+								<div class="page-2-img">
+									<img src="music-people_files/page-3-1_c6e7f9c.png" alt="CMIC">
+								</div>
+							</div>
+							<div class="page-2-btm">
+								<div class="page-2-header">
+									<img class="page-2-title" src="music-people_files/page-3-title-2_d83f152.png" alt="战略合作伙伴">
+								</div>
+								<div class="page-2-partner">
+									<div class="page-2-img">
+										<img src="music-people_files/page-3-2_967deef.png" alt="Young Blood计划">
+										<p>Young Blood 新血计划</p>
+										<p class="text-secondary">由摩登天空于2017年发起，2018年Young Blood音乐版块全面升级，开启包括专业制作人和评审团加入的唱片计划，旨在帮助更多新血青年探索音乐世界，实现自己的音乐梦想。</p>
+									</div>
+									<div class="page-2-img">
+										<img src="music-people_files/page-3-3_976dc82.png" alt="太合音乐集团C">
+										<p>中国领先的音乐服务提供商</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section fp-section fp-table" id="section3" style="height: 910px;">
+				<div class="fp-tableCell" style="height: 910px;">
+					<div class="page-3 page">
+						<div class="page-3-container">
+							<div class="page-3-header">
+								<img class="page-3-title" src="music-people_files/page-4-title-1_4c7dfb9.png" alt="战略合作伙伴">
+							</div>
+							<div class="page-3-content">
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="华纳唱片" src="music-people_files/page-4-1_a43d2af.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="SONY MUSIC" src="music-people_files/page-4-2_2c185e7.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="SONY/ATV" src="music-people_files/page-4-3_65d6367.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="环球音乐" src="music-people_files/page-4-4_b99d0b3.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="咪咕音乐" src="music-people_files/page-4-5_5eb8544.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="CRC" src="music-people_files/page-4-6_035e531.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="滚石唱片" src="music-people_files/page-4-7_d6cbb82.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="摩登天空" src="music-people_files/page-4-8_c6cd99e.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="华研国际音乐" src="music-people_files/page-4-9_0fa9536.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="相信音乐" src="music-people_files/page-4-10_4cd57f4.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="网易云音乐" src="music-people_files/page-4-11_1f7974b.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="虾米音乐" src="music-people_files/page-4-12_dfbcd6c.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="酷狗音乐" src="music-people_files/page-4-13_7d11fa9.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="腾讯音乐人" src="music-people_files/page-4-14_2f3eb27.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="NNIDI" src="music-people_files/page-4-15_97a4506.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="天浩传媒" src="music-people_files/page-4-16_0215a81.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="天浩盛世" src="music-people_files/page-4-17_f569a9c.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="福茂唱片" src="music-people_files/page-4-18_cee96a4.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="唱吧" src="music-people_files/page-4-19_3f5b47f.png">
+									</div>
+								</div>
+								<div class="page-3-block">
+									<div class="page-3-avatar">
+										<img alt="碎乐" src="music-people_files/page-4-20_90bbc6a.png">
+									</div>
+								</div>
+							</div>
+							<div class="page-3-header">
+								<img class="page-3-title" src="music-people_files/page-4-title-2_346983a.png" alt="战略合作伙伴">
+							</div>
+							<div class="page-3-icons">
+								<div class="page-3-icon">
+									<img alt="今日头条" src="music-people_files/page-4-icon-1_85f96b8.png">
+								</div>
+								<div class="page-3-icon">
+									<img alt="火山小视频" src="music-people_files/page-4-icon-2_ed4dfdf.png">
+								</div>
+								<div class="page-3-icon">
+									<img alt="西瓜视频" src="music-people_files/page-4-icon-4_52244d3.png">
+								</div>
+								<div class="page-3-icon">
+									<img alt="悟空问答" src="music-people_files/page-4-icon-5_8af8c81.png">
+								</div>
+								<div class="page-3-icon">
+									<img alt="Flipagram" src="music-people_files/page-4-icon-7_447df84.png">
+								</div>
+								<div class="page-3-icon">
+									<img alt="头条音乐" src="music-people_files/page-4-icon-8_c5e76f1.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="position: fixed; right: 20px; bottom: 20px;">
+			<img style="width: 129px; height: 250px;" src="music-people_files/haoshengyin1_adac7af.png">
+		</div>
+
+		<div class="header-modal" id="headerModal">
+			<div class="header-modal-container" id="headerModalCont">
+				<p class="header-modal-content">Gary溫馨提示</p>
+				<p class="header-modal-tips">如果已有抖音账号，请先到抖音app个人主页。点击右上角“…”—设置—账号管理，绑定手机号，再用该手机号来登录哦！</p>
+				<a th:href="@{~/tologin}">
+					<div class="header-modal-button" id="modalBtn">我知道了</div>
+				</a>
+			</div>
+		</div>
+
+		<script>
+			(function() {
+				var bp = document.createElement('script');
+				var curProtocol = window.location.protocol.split(':')[0];
+				if (curProtocol === 'https') {
+					bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+				} else {
+					bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+				}
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(bp, s);
+			})();
+		</script>
+		<script>
+			$(function() {
+				require('web:page/musician/header/index');
+				require('web:page/musician/home/index');
+			})
+		</script>
+	</div>
+	<script>
+		window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+			tags : {
+				bid : 'douyin_web',
+				pid : 'musician_home'
+			}
+		}).install();
+	</script>
+	<script src="music-people_files/index_7a47cdc.js"></script>
+	<script src="music-people_files/musician_38254fc.js"></script>
+	<script src="music-people_files/index_07f88bb.js"></script>
+	<div id="fp-nav" class="right" style="margin-top: -43.5px;">
+		<ul>
+
+		</ul>
+	</div>
+</body>
+</html>

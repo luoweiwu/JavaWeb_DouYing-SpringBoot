@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">  <script async="" src="add-music_files/analytics.js"></script><script src="add-music_files/slardar.js"></script><script>window.Slardar && window.Slardar.install({
+        sampleRate: 1,
+        bid: 'douyin_web',
+        pid: 'musician_apply_submit',
+        ignoreAjax: [],
+        ignoreStatic: []
+    });</script>  <title>
+    &nbsp;抖音音乐人 </title><meta charset="utf-8"><meta http-equiv="”Cache-Control”" content="”no-transform”"><meta http-equiv="”Cache-Control”" content="”no-siteapp”">  <meta name="baidu-site-verification" content="szjdG38sKy"><meta name="keywords" content="抖音看见音乐,看见音乐计划,抖音音乐人,原创音乐,看见音乐计划官网"><meta name="description" content="抖音看见音乐计划,你的音乐,我看得见">  <link rel="shortcut icon" href="https://s3.bytecdn.cn/aweme/resource/web/static/image/logo/favicon_v2_7145ff0.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"><link rel="dns-prefetch" href="https://s3.bytecdn.cn/"><link rel="dns-prefetch" href="https://s3a.bytecdn.cn/"><link rel="dns-prefetch" href="https://s3b.bytecdn.cn/"><link rel="dns-prefetch" href="https://s0.pstatp.com/"><link rel="dns-prefetch" href="https://s1.pstatp.com/"><link rel="dns-prefetch" href="https://s2.pstatp.com/">  <link rel="stylesheet" href="add-music_files/base_4a834a9.css">  <link rel="stylesheet" href="add-music_files/base_ce73669.css">  <link rel="stylesheet" href="add-music_files/dropkick_1b1894b.css">   <!--[if IE]><script src="//s3a.bytecdn.cn/aweme/resource/web/static/script/lib/fix-ie8_e8a0650.js"></script><![endif]--><script src="add-music_files/core_1f49c51.js"></script>  <script src="add-music_files/jquery.js"></script><script src="add-music_files/raven_8c2f9e8.js"></script>     <script>window.PAGEVIEW_NAME = '/musician_apply_submit/';</script>  <script>// BA全局变量
+var baAccount = window.AME_BA_ID || 'fe557d1f75199e';
+var baevent = function(){};
+
+(function(){
+    var sampleRate = 100; // 采样比例，即上报量占总流量的百分比
+
+    !function (t, e, a, n, s, c){t.ToutiaoAnalyticsObject = s, t[s] = t[s] || function (){
+    (t[s].q = t[s].q || []).push(arguments)}, t[s].t = 1 * new Date, t[s].s = c;var i = e.createElement(a);
+    i.async = 1, i.src = n, e.getElementsByTagName("head")[0].appendChild(i)
+    }(window, document, "script", "//s3.bytecdn.cn/ta/resource/v0/analytics.js", "ba");
+
+    ba('create', baAccount, {'sampleRate': sampleRate});
+    ba('send', 'pageview');
+
+    baevent = function(category, action, label, value){
+        console.log("ba:"+category+","+action+","+label);
+        if(category != 'event') {
+            ba('send', 'event', category, action, label, typeof value !== 'undefined' ? value: 1);
+        }
+    };
+})();</script><script async="" src="add-music_files/analytics_002.js"></script> <script>var gaAccount = window.AME_GA_ID || 'UA-75850242-4';
+
+var _gaq = _gaq || [];
+var gaqpush=function(){};
+var gaevent=function(){};
+var gapageview=function(){};
+var trackPV = gapageview;
+
+var sampleRate = 20;
+
+function initGA(){
+
+    if(sampleRate && gaAccount){
+        window.onerror = function(message, file, line) {
+            var msg = message,
+                f = file,
+                l = line;
+            if(typeof message === 'object') {
+                msg = message.message;
+                f = message.fileName;
+                l = message.lineNumber;
+            }
+            var sFormattedMessage = '[' + f + ' (' + l + ')]' + msg;
+            window.gaevent ? gaevent('Exceptions', sFormattedMessage, location.pathname + '::::' + navigator.userAgent) : '';
+        };
+
+        var test_channel = "",
+            test_version = "",
+            utm_source = "";
+
+        // var ua = navigator.userAgent;
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        // Replace with your property ID.
+        ga('create', gaAccount, {'sampleRate': sampleRate});
+
+
+        //Init GA Function
+        gapageview = function(pageName) {
+            ga('send', 'pageview', pageName);
+            console.log('ga:pageview', pageName);
+        };
+
+        gaqpush = function(ga_event, ga_label){
+            gaevent('event',ga_event,ga_label);
+        };
+
+        gaevent = function(category, action, label, value){
+            if(test_channel.indexOf(action) >-1) label = label+test_version;
+            console.log("ga:"+category+","+action+","+label);
+            if(category != 'event') {
+                ga('send', 'event', category, action, label, typeof value !== "undefined" ? value: 1);
+            }
+            if(typeof window.baevent == "function") {
+                baevent(category, action, label, value);
+            }
+        };
+
+        gapageview(window.PAGEVIEW_NAME);
+
+        $("html").on('click', '[ga_event]', function(e){
+            var $this =  $(this);
+            var ga_category = $this.attr('ga_category') || 'event';
+            var ga_event = $this.attr('ga_event');
+            var ga_label = $this.attr('ga_label');
+            gaevent(ga_category,ga_event,ga_label);
+            if($this.is('a')){
+                var href = $this.attr('href')||'', target = this.target;
+                if(!( href[0]==='#' || target === "_blank" || e.isDefaultPrevented())) {
+                    setTimeout(function(){
+                        location.href = href
+                    },400);
+                    return false
+                }
+            }
+        });
+    }
+}
+
+initGA();</script> <link rel="stylesheet" href="add-music_files/index_db26f14.css"></head><body>  <div class="main-content-block">   <div class="header"><div class="header-container"><a href="https://musician.douyin.com/"><div class="header-logo"><img src="add-music_files/logo_08524dd.png" alt="logo"></div></a><div class="header-login"><a href="mailto:musician@bytedance.com" class="header-email"><span class="header-email-icon"></span> <span>反馈及举报邮箱 musician@bytedance.com</span> </a><a href="#" id="loginBtn">  <span class="header-user-icon" style="background-image: url(http://p0.pstatp.com/origin/3793/3114521287)"></span> <span>用户522260</span>  </a>  <a href="https://www.douyin.com/logout/?next=https%3A%2F%2Fwww.douyin.com%2Fmusicianlogout%2F">| 退出登录</a>  </div></div></div>  <div class="common-header"><div class="common-module-container"><div class="common-module"><img src="add-music_files/icon_1_active_cc77279.png"><p class="common-module-txt">填写资料 <span id="verifyStatus" class="verify-status" style="display: inline;">(审核中)</span></p></div>  <div class="common-hr"></div>  <div class="common-module">  <img src="add-music_files/icon_2_active_5b30557.png">  <p class="common-module-txt">提交作品</p></div>  <div class="common-hr"></div>  <div class="common-module">  <img src="add-music_files/icon_3_grey_b8ff386.png">  <p class="common-module-txt">等待审核</p></div></div></div> <div class="zz-toast" id="zz-toast"><h4 id="zz-toast-title">错误提示</h4><p id="zz-toast-txt" class="zz-toast-txt"> This is a danger message. </p>  </div> <div class="container"><p class="step-tips"><span>声明：抖音团队不会以任何形式向您收取推广费用，如您遇到收费情况，请发邮件至举报邮箱：</span> <a href="mailto:musician@bytedance.com" class="step-tips-email">musician@bytedance.com</a></p><p class="step-title">提交作品</p><p class="submit-step-tips-musi">建议整曲和剪辑版本（如副歌部分）一起提交，30s-60s的剪辑版本更适合抖音拍摄和传播哦<br>歌曲的剪辑版本建议命名为歌名-剪辑版，更方便被推荐~</p><div class="step-form-submit"><div class="submit-step-upload" id="showModalBtn">+ 添加音乐</div><div class="submit-tab-group"><button id="showMusic" class="submit-tab-btn" style="color: #4a4a4a">已提交&nbsp;</button> <span class="submit-tab-btn">|</span> <button id="showAdded" class="submit-tab-btn" style="color: #ccc" disabled="disabled">&nbsp;新增项</button></div><div class="submit-music-container"><div class="submit-music-header"><div class="submit-music-cover">封面</div><div class="submit-music-name">音乐</div><div class="submit-music-audio">试听</div><div class="submit-music-campus">是否高校好声音</div></div><div id="musicListCont" class="submit-music-list">暂无作品，点击添加音乐添加你的作品～</div></div><div class="submit-music-pages" id="pages"><button id="pagePre" class="submit-music-page-btn" disabled="disabled" style="color: #ccc">&lt;上一页</button> <span>/</span> <button id="pageNxt" class="submit-music-page-btn" disabled="disabled" style="color: #ccc">下一页 &gt;</button></div><div class="submit-step-button-group"><div class="step-button" id="submitApply">提交</div></div><div class="submit-modal submit-modal-show" id="modal"><div class="submit-modal-container submit-modal-container-show" id="modalContainer"><p class="step-title">添加音乐</p><form class="submit-modal-form" id="uploadMusicForm" novalidate="novalidate"><div class="submit-modal-group"><label class="submit-modal-label label-not-null">风格</label> <div class="dk-select step-select" id="dk0-stepSelect"><div class="dk-selected " tabindex="0" id="dk0-combobox" aria-live="assertive" aria-owns="dk0-listbox" role="combobox" aria-activedescendant="dk0-[41,49]">流行</div><ul class="dk-select-options" id="dk0-listbox" role="listbox" aria-expanded="false"><li class="dk-optgroup"><div class="dk-optgroup-label">中文</div><ul class="dk-optgroup-options"><li class="dk-option  dk-option-selected" data-value="[41,49]" text="流行" role="option" aria-selected="true" id="dk0-[41,49]">流行</li><li class="dk-option " data-value="[41,50]" text="说唱" role="option" aria-selected="false" id="dk0-[41,50]">说唱</li><li class="dk-option " data-value="[41,51]" text="电音" role="option" aria-selected="false" id="dk0-[41,51]">电音</li><li class="dk-option " data-value="[41,53]" text="民谣" role="option" aria-selected="false" id="dk0-[41,53]">民谣</li><li class="dk-option " data-value="[41,56]" text="动漫" role="option" aria-selected="false" id="dk0-[41,56]">动漫</li><li class="dk-option " data-value="[41,54]" text="古风" role="option" aria-selected="false" id="dk0-[41,54]">古风</li><li class="dk-option " data-value="[41,55]" text="摇滚" role="option" aria-selected="false" id="dk0-[41,55]">摇滚</li><li class="dk-option " data-value="[41,93]" text="disco" role="option" aria-selected="false" id="dk0-[41,93]">disco</li></ul></li><li class="dk-optgroup"><div class="dk-optgroup-label">欧美</div><ul class="dk-optgroup-options"><li class="dk-option " data-value="[42,57]" text="流行" role="option" aria-selected="false" id="dk0-[42,57]">流行</li><li class="dk-option " data-value="[42,58]" text="说唱" role="option" aria-selected="false" id="dk0-[42,58]">说唱</li><li class="dk-option " data-value="[42,59]" text="电音" role="option" aria-selected="false" id="dk0-[42,59]">电音</li><li class="dk-option " data-value="[42,61]" text="爵士" role="option" aria-selected="false" id="dk0-[42,61]">爵士</li><li class="dk-option " data-value="[42,62]" text="乡村" role="option" aria-selected="false" id="dk0-[42,62]">乡村</li><li class="dk-option " data-value="[42,63]" text="布鲁斯" role="option" aria-selected="false" id="dk0-[42,63]">布鲁斯</li><li class="dk-option " data-value="[42,64]" text="民谣" role="option" aria-selected="false" id="dk0-[42,64]">民谣</li><li class="dk-option " data-value="[42,92]" text="hiphop" role="option" aria-selected="false" id="dk0-[42,92]">hiphop</li><li class="dk-option " data-value="[42,95]" text="disco" role="option" aria-selected="false" id="dk0-[42,95]">disco</li></ul></li><li class="dk-optgroup"><div class="dk-optgroup-label">日韩</div><ul class="dk-optgroup-options"><li class="dk-option " data-value="[43,67]" text="说唱" role="option" aria-selected="false" id="dk0-[43,67]">说唱</li><li class="dk-option " data-value="[43,68]" text="电音" role="option" aria-selected="false" id="dk0-[43,68]">电音</li><li class="dk-option " data-value="[43,85]" text="摇滚" role="option" aria-selected="false" id="dk0-[43,85]">摇滚</li><li class="dk-option " data-value="[43,69]" text="动漫" role="option" aria-selected="false" id="dk0-[43,69]">动漫</li><li class="dk-option " data-value="[43,65]" text="j-pop" role="option" aria-selected="false" id="dk0-[43,65]">j-pop</li><li class="dk-option " data-value="[43,66]" text="k-pop" role="option" aria-selected="false" id="dk0-[43,66]">k-pop</li></ul></li><li class="dk-optgroup"><div class="dk-optgroup-label">趣味</div><ul class="dk-optgroup-options"><li class="dk-option " data-value="[44,70]" text="萌宠" role="option" aria-selected="false" id="dk0-[44,70]">萌宠</li><li class="dk-option " data-value="[44,88]" text="儿童" role="option" aria-selected="false" id="dk0-[44,88]">儿童</li><li class="dk-option " data-value="[44,71]" text="段子" role="option" aria-selected="false" id="dk0-[44,71]">段子</li><li class="dk-option " data-value="[44,87]" text="可爱" role="option" aria-selected="false" id="dk0-[44,87]">可爱</li><li class="dk-option " data-value="[44,90]" text="幽默" role="option" aria-selected="false" id="dk0-[44,90]">幽默</li></ul></li></ul></div><select class="step-select" id="stepSelect" name="style" data-dkcacheid="0">  <optgroup label="中文"><option value="[41,49]" selected="selected">流行</option><option value="[41,50]">说唱</option><option value="[41,51]">电音</option><option value="[41,53]">民谣</option><option value="[41,56]">动漫</option><option value="[41,54]">古风</option><option value="[41,55]">摇滚</option><option value="[41,93]">disco</option>  </optgroup>  <optgroup label="欧美"><option value="[42,57]">流行</option><option value="[42,58]">说唱</option><option value="[42,59]">电音</option><option value="[42,61]">爵士</option><option value="[42,62]">乡村</option><option value="[42,63]">布鲁斯</option><option value="[42,64]">民谣</option><option value="[42,92]">hiphop</option><option value="[42,95]">disco</option>  </optgroup>  <optgroup label="日韩"><option value="[43,67]">说唱</option><option value="[43,68]">电音</option><option value="[43,85]">摇滚</option><option value="[43,69]">动漫</option><option value="[43,65]">j-pop</option><option value="[43,66]">k-pop</option></optgroup>  <optgroup label="趣味"><option value="[44,70]">萌宠</option><option value="[44,88]">儿童</option><option value="[44,71]">段子</option><option value="[44,87]">可爱</option><option value="[44,90]">幽默</option></optgroup></select></div><div class="submit-modal-group"><label for="music" class="submit-modal-label label-not-null">歌曲名</label> <input class="submit-modal-input" name="title" type="text"></div><div class="submit-modal-group submit-modal-group--tips"><label for="music" class="submit-modal-label label-not-null">歌曲封面</label><div type="text" class="submit-modal-file"><div class="submit-modal-button">上传封面文件</div><input class="submit-modal-name" disabled="disabled" id="coverName" name="coverName"> <input name="file" accept="image/jpeg,image/jpg,image/png,image/svg" id="coverFile" class="submit-modal-fileiput" type="file"> <input class="step-hide-input" name="cover_uri" id="cover_uri" type="text"></div></div><p class="submit-modal-tips">推荐上传正方形封面</p><div class="submit-modal-group submit-modal-group--tips"><label for="music" class="submit-modal-label label-not-null">音乐文件</label><div type="text" class="submit-modal-file"><div class="submit-modal-button">上传音乐文件</div><input class="submit-modal-name" disabled="disabled" id="musicName" name="musicName"> <input name="file" id="musicFile" class="submit-modal-fileiput" accept="audio/mp3,audio/wav" type="file"> <input class="step-hide-input" name="song_uri" id="song_uri" type="text"></div></div><p class="submit-modal-tips">支持mp3/wav格式，且音质在320kb以上，文件不超过200MB</p><div class="submit-modal-group" id="if-campus" style="margin-bottom:5px;"><label for="original_type" class="submit-modal-label label-not-null">是否参与校园好声音</label> <input class="" name="original_type" value="1" type="radio">是 <input class="" name="original_type" value="0" checked="checked" type="radio">否</div><p class="submit-modal-tips"><a style="text-decoration:underline;" href="http://voice.yiban.cn/" target="_blank">查看校园好声音活动详情</a></p><div id="lyric-upload"><div class="submit-modal-group submit-modal-group--tips"><label for="music" class="submit-modal-label">歌词</label><div type="text" class="submit-modal-file"><div class="submit-modal-button">解析歌词文件</div><input class="submit-modal-name" disabled="disabled" id="lyricName" name="lyricName"> <input name="file" id="lyricFile" class="submit-modal-fileiput" accept=".lrc,.trc" type="file"> <input class="step-hide-input" name="lyric" id="lyric" type="text"></div></div><p class="submit-modal-tips">支持lrc/trc格式</p></div><div id="music-upload"><div class="submit-modal-group submit-modal-group--tips"><label for="music" class="submit-modal-label label-not-null">曲谱文件</label><div type="text" class="submit-modal-file"><div class="submit-modal-button">上传曲谱文件</div><input class="submit-modal-name" disabled="disabled" id="qupuName" name="qupuName"> <input name="file" id="qupuFile" class="submit-modal-fileiput" accept="image/*, application/pdf" type="file"> <input class="step-hide-input" name="qupu_uri" id="qupu_uri" type="text"></div></div><p class="submit-modal-tips">支持图片格式和pdf格式</p></div><div class="submit-step-button-group"><input class="step-button-disable" disabled="disabled" value="确认添加" id="submitBtn" type="submit"><div class="step-button" id="hideModalBtn">取消</div></div></form></div></div></div></div><script>$(function() {
+        require('web:common/utils/promise.polyfill');
+        require('web:page/musician/apply/submitMusic/submit');
+    })</script>   <script>window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+        tags: {
+            bid: 'douyin_web',
+            pid: 'musician_apply_submit'
+        }
+    }).install();</script>   </div>   <script>window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+        tags: {
+            bid: 'douyin_web',
+            pid: 'musician_apply_submit'
+        }
+    }).install();</script>  <script src="add-music_files/index_7a47cdc.js"></script>
+<script src="add-music_files/es6-promise.js"></script>
+<script src="add-music_files/promise.js"></script>
+<script src="add-music_files/file_f9a5ca7.js"></script>
+<script src="add-music_files/form_ebcf55b.js"></script>
+<script src="add-music_files/toast_d6fd98c.js"></script>
+<script src="add-music_files/dropkick_7018fdd.js"></script>
+<script src="add-music_files/xss_6a7474d.js"></script>
+<script src="add-music_files/submit_9e6c0af.js"></script></body></html>

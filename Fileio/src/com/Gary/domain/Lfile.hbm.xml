@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+	<hibernate-mapping package="com.Gary.domain">
+   	<class name="Lfile" table="lfile">
+   		<id name="id">
+   			<generator class="uuid"></generator>
+   		</id>
+   		<property name="filename" column="filename"></property>
+   		<property name="filetype" column="filetype"></property>
+   		<property name="url" column="url"></property>
+   		<property name="createtime" column="createtime"></property>
+   	</class>
+   
+   
+   </hibernate-mapping>

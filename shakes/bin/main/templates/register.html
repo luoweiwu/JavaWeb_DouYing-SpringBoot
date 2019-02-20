@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>&nbsp;抖音音乐人</title>
+<meta charset="utf-8">
+<meta http-equiv="”Cache-Control”" content="”no-transform”">
+<meta http-equiv="”Cache-Control”" content="”no-siteapp”">
+<meta name="baidu-site-verification" content="szjdG38sKy">
+<meta name="keywords" content="抖音看见音乐,看见音乐计划,抖音音乐人,原创音乐,看见音乐计划官网">
+<meta name="description" content="抖音看见音乐计划,你的音乐,我看得见">
+<link rel="shortcut icon" href="https://s3.bytecdn.cn/aweme/resource/web/static/image/logo/favicon_v2_7145ff0.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<link rel="dns-prefetch" href="https://s3.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3a.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3b.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s0.pstatp.com/">
+<link rel="dns-prefetch" href="https://s1.pstatp.com/">
+<link rel="dns-prefetch" href="https://s2.pstatp.com/">
+<link rel="stylesheet" href="register_files/base_4a834a9.css">
+<link rel="stylesheet" href="register_files/base_ce73669.css">
+<style type="text/css">
+ol {
+	margin: 0;
+	padding: 0
+}
+
+table td, table th {
+	padding: 0
+}
+
+.c5 {
+	-webkit-text-decoration-skip: none;
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	font-size: 12pt;
+	font-family: "\004eff\005b8b"
+}
+
+.c10 {
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+	line-height: 1.1500000000000001;
+	orphans: 2;
+	widows: 2;
+	text-align: center
+}
+
+.c0 {
+	padding-top: 0pt;
+	padding-bottom: 0pt;
+	line-height: 1.1500000000000001;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+.c2 {
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	font-style: normal
+}
+
+.c4 {
+	color: #ff0000;
+	text-decoration: none;
+	vertical-align: baseline;
+	font-style: normal
+}
+
+.c3 {
+	font-weight: 400;
+	font-size: 10.5pt;
+	font-family: "\004eff\005b8b"
+}
+
+.c1 {
+	font-size: 10.5pt;
+	font-family: "\004eff\005b8b";
+	font-weight: 700
+}
+
+.c7 {
+	background-color: #ffffff;
+	max-width: 451.5pt;
+}
+
+.c8 {
+	font-weight: 700;
+	font-size: 14pt;
+	font-family: "\004eff\005b8b"
+}
+
+.c6 {
+	background-color: #ffff00
+}
+
+.c9 {
+	height: 11pt
+}
+
+.title {
+	padding-top: 0pt;
+	color: #000000;
+	font-size: 26pt;
+	padding-bottom: 3pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+.subtitle {
+	padding-top: 0pt;
+	color: #666666;
+	font-size: 15pt;
+	padding-bottom: 16pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+li {
+	color: #000000;
+	font-size: 11pt;
+	font-family: "Arial"
+}
+
+p {
+	margin: 0;
+	color: #000000;
+	font-size: 11pt;
+	font-family: "Arial"
+}
+
+h1 {
+	padding-top: 20pt;
+	color: #000000;
+	font-size: 20pt;
+	padding-bottom: 6pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+h2 {
+	padding-top: 18pt;
+	color: #000000;
+	font-size: 16pt;
+	padding-bottom: 6pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+h3 {
+	padding-top: 16pt;
+	color: #434343;
+	font-size: 14pt;
+	padding-bottom: 4pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+h4 {
+	padding-top: 14pt;
+	color: #666666;
+	font-size: 12pt;
+	padding-bottom: 4pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+h5 {
+	padding-top: 12pt;
+	color: #666666;
+	font-size: 11pt;
+	padding-bottom: 4pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+
+h6 {
+	padding-top: 12pt;
+	color: #666666;
+	font-size: 11pt;
+	padding-bottom: 4pt;
+	font-family: "Arial";
+	line-height: 1.1500000000000001;
+	page-break-after: avoid;
+	font-style: italic;
+	orphans: 2;
+	widows: 2;
+	text-align: left
+}
+</style>
+<!--[if IE]><script src="//s3a.bytecdn.cn/aweme/resource/web/static/script/lib/fix-ie8_e8a0650.js"></script><![endif]-->
+<script async="" src="register_files/analytics.js"></script>
+<script src="register_files/core_1f49c51.js"></script>
+<script src="register_files/jquery.js"></script>
+<script src="register_files/raven_8c2f9e8.js"></script>
+<script src="register_files/slardar.js"></script>
+<script>
+	window.Slardar && window.Slardar.install({
+		sampleRate : 1,
+		bid : 'douyin_web',
+		pid : 'musician_verify_upload',
+		ignoreAjax : [],
+		ignoreStatic : []
+	});
+</script>
+<script>
+	window.PAGEVIEW_NAME = '/musician_apply_verify/';
+</script>
+<script>
+	// BA全局变量
+	var baAccount = window.AME_BA_ID || 'fe557d1f75199e';
+	var baevent = function() {
+	};
+
+	(function() {
+		var sampleRate = 100; // 采样比例，即上报量占总流量的百分比
+
+		!function(t, e, a, n, s, c) {
+			t.ToutiaoAnalyticsObject = s, t[s] = t[s] || function() {
+				(t[s].q = t[s].q || []).push(arguments)
+			}, t[s].t = 1 * new Date, t[s].s = c;
+			var i = e.createElement(a);
+			i.async = 1, i.src = n, e.getElementsByTagName("head")[0]
+					.appendChild(i)
+		}(window, document, "script",
+				"//s3.bytecdn.cn/ta/resource/v0/analytics.js", "ba");
+
+		ba('create', baAccount, {
+			'sampleRate' : sampleRate
+		});
+		ba('send', 'pageview');
+
+		baevent = function(category, action, label, value) {
+			console.log("ba:" + category + "," + action + "," + label);
+			if (category != 'event') {
+				ba('send', 'event', category, action, label,
+						typeof value !== 'undefined' ? value : 1);
+			}
+		};
+	})();
+</script>
+<script async="" src="register_files/analytics_002.js"></script>
+<script>
+	var gaAccount = window.AME_GA_ID || 'UA-75850242-4';
+
+	var _gaq = _gaq || [];
+	var gaqpush = function() {
+	};
+	var gaevent = function() {
+	};
+	var gapageview = function() {
+	};
+	var trackPV = gapageview;
+
+	var sampleRate = 20;
+
+	function initGA() {
+
+		if (sampleRate && gaAccount) {
+			window.onerror = function(message, file, line) {
+				var msg = message, f = file, l = line;
+				if (typeof message === 'object') {
+					msg = message.message;
+					f = message.fileName;
+					l = message.lineNumber;
+				}
+				var sFormattedMessage = '[' + f + ' (' + l + ')]' + msg;
+				window.gaevent ? gaevent('Exceptions', sFormattedMessage,
+						location.pathname + '::::' + navigator.userAgent) : '';
+			};
+
+			var test_channel = "", test_version = "", utm_source = "";
+
+			// var ua = navigator.userAgent;
+
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+
+			// Replace with your property ID.
+			ga('create', gaAccount, {
+				'sampleRate' : sampleRate
+			});
+
+			//Init GA Function
+			gapageview = function(pageName) {
+				ga('send', 'pageview', pageName);
+				console.log('ga:pageview', pageName);
+			};
+
+			gaqpush = function(ga_event, ga_label) {
+				gaevent('event', ga_event, ga_label);
+			};
+
+			gaevent = function(category, action, label, value) {
+				if (test_channel.indexOf(action) > -1)
+					label = label + test_version;
+				console.log("ga:" + category + "," + action + "," + label);
+				if (category != 'event') {
+					ga('send', 'event', category, action, label,
+							typeof value !== "undefined" ? value : 1);
+				}
+				if (typeof window.baevent == "function") {
+					baevent(category, action, label, value);
+				}
+			};
+
+			gapageview(window.PAGEVIEW_NAME);
+
+			$("html")
+					.on(
+							'click',
+							'[ga_event]',
+							function(e) {
+								var $this = $(this);
+								var ga_category = $this.attr('ga_category')
+										|| 'event';
+								var ga_event = $this.attr('ga_event');
+								var ga_label = $this.attr('ga_label');
+								gaevent(ga_category, ga_event, ga_label);
+								if ($this.is('a')) {
+									var href = $this.attr('href') || '', target = this.target;
+									if (!(href[0] === '#'
+											|| target === "_blank" || e
+											.isDefaultPrevented())) {
+										setTimeout(function() {
+											location.href = href
+										}, 400);
+										return false
+									}
+								}
+							});
+		}
+	}
+
+	initGA();
+</script>
+<link rel="stylesheet" href="register_files/index_db26f14.css">
+</head>
+<body>
+	<div class="main-content-block">
+		<div th:replace="~{fragments/header::header}"></div>
+		<div class="common-header">
+			<div class="common-module-container">
+				<div class="common-module">
+					<img src="register_files/icon_1_active_cc77279.png">
+					<p class="common-module-txt">
+						填写资料
+						<span id="verifyStatus" class="verify-status">(审核中)</span>
+					</p>
+				</div>
+				<div class="common-hr"></div>
+				<div class="common-module">
+					<img src="register_files/icon_2_grey_2e4f238.png">
+					<p class="common-module-txt">提交作品</p>
+				</div>
+				<div class="common-hr-grey"></div>
+				<div class="common-module">
+					<img src="register_files/icon_3_grey_b8ff386.png">
+					<p class="common-module-txt">等待审核</p>
+				</div>
+			</div>
+		</div>
+		<div class="zz-toast" id="zz-toast">
+			<h4 id="zz-toast-title">错误提示</h4>
+			<p id="zz-toast-txt" class="zz-toast-txt">This is a danger message.</p>
+		</div>
+		<div class="container">
+			<p class="step-tips">
+				<span>声明：抖音团队不会以任何形式向您收取推广费用，如您遇到收费情况，请发邮件至举报邮箱：</span>
+				<a href="mailto:musician@bytedance.com" class="step-tips-email">musician@bytedance.com</a>
+			</p>
+			<p class="step-title">音乐人信息</p>
+			<form class="step-form" id="stepForm" method="post" novalidate="novalidate">
+				<div class="step-input-group">
+					<label for="stage_name" class="verify-step-label label-not-null">歌手名</label>
+					<input id="stage_name" name="stage_name" class="step-input" type="text">
+				</div>
+				<div class="step-input-group">
+					<label for="name" class="verify-step-label label-not-null">真实姓名</label>
+					<input id="name" name="name" class="verify-step-input" type="text">
+				</div>
+				<div class="step-input-group">
+					<label for="wechat" class="verify-step-label">微信</label>
+					<input id="wechat" class="verify-step-input" name="wechat" type="text">
+				</div>
+				<div class="step-input-group">
+					<label for="idCard" class="verify-step-label label-not-null">身份证号码</label>
+					<input id="idCard" class="verify-step-input" name="id_card" type="text">
+				</div>
+
+				<div class="verify-step-button-group">
+					<input class="step-button" value="提交实名审核" type="submit">
+				</div>
+			</form>
+			<div class="verify-modal" id="modal">
+				<div class="verify-modal-container" id="modalContainer">
+					<h1>你的实名认证未通过！</h1>
+					<p>请重新填写姓名、身份证号</p>
+					<div class="step-button" id="hideModalBtn">确定</div>
+				</div>
+			</div>
+			<div class="agreement-modal" id="agreement">
+				<div class="agreement-modal-container" id="agreementContainer">
+					<div class="agreement-modal-content">
+						<p class="c7"></p>
+						<p class="c10">
+							<span class="c2 c8">抖音用户音乐作品推广服务及授权协议</span>
+						</p>
+						<p class="c0 c9">
+							<span class="c2 c3"></span>
+						</p>
+						<p class="c0">
+							<span class="c3">欢迎您在抖音平台（“</span>
+							<span class="c1">抖音</span>
+							<span class="c3">”）推广、上传并授权抖音使用您的音乐！（以下简称“</span>
+							<span class="c1">本授权</span>
+							<span class="c2 c3">”）</span>
+						</p>
+						<p class="c0 c9">
+							<span class="c2 c3"></span>
+						</p>
+						<p class="c0">
+							<span class="c1">在您进行本授权前，请您认真阅读并遵守《抖音用户服务协议》（以下简称“本协议”）。请您务必审慎阅读并充分理解各条款内容，特别是限制或免除责任条款，以及开通或使用某项服务的单独协议。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">除非您已阅读并接受本协议所有条款，否则您无权参加本授权及使用相关服务（以下简称“本服务”）。您对本服务的登陆、查看、下载、发布信息、使用等行为即视为您已阅读并同意受本协议的约束。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">如果您是未成年人，请在监护人的陪同下仔细阅读并充分理解本协议，并特别注意未成年人使用条款，并征得法定监护人的同意下进行本授权。</span>
+						</p>
+						<p class="c0 c9">
+							<span class="c2 c3"></span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">前言</span>
+						</p>
+						<p class="c0">
+							<span class="c1">凡 在抖音推广、上传并授权抖音使用您的音乐的用户（以下简称“您”或“授权人”），在网络报名参加时均需签署本协议，参与者通过网络阅读本协议全文并点击勾 选“我已阅读并同意”项后，本协议对协议各方当事人即具有合同法律效力。授权人按上传流程提交授权人的作品（以下简称 “授权作品”），即视为授权人完全同意本授权，并为在“抖音”及相关平台上推广授权作品授权北京微播视界科技有限公司及其关联公司、控制公司（以下统称 “公司”或“被授权人”）</span>
+							<span class="c5">排他使用授权作品</span>
+							<span class="c2 c1">。</span>
+						</p>
+						<p class="c0 c9">
+							<span class="c2 c3"></span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">一、【声明与保证】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">1.1授权人保证：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（1） 授权人提交的授权作品为其原创，通过本协议向被授权人进行的授权是合法、有效、无争议的，且拥有授权被授权人按本协议约定的方式使用授权作品的权利。如果 因为被授权人在本协议范围内使用授权作品陷入任何诉讼、调查、法律纠纷、行政处罚、诉讼或仲裁等，由授权人承担全部的法律责任，并赔偿被授权人因此受到的 全部直接或间接损失。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（2）授权人拥有授权作品之合法完整的词曲著作权以及邻接权（包括录音录像制作者权、表演者权等），或前述权利合法有效的许可授权，以及其转授权权利。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（3）词曲著作权人、表演者、录音/录像制作者之间对授权作品著作权份额的内部约定，不得对抗被授权人依本协议约定取得的授权和权益。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">1.2 授权人保证本授权需符合以下标准。授权人如提交有违下列标准之授权作品或材料，将直接视为丧失上传授权作品资格，被授权人有权删除提交内容（包括但不限于 授权人信息、授权作品等）且无须作出任何解释及通知。授权人不得以未获通知取消资格为由对被授权人提出任何异议。具体标准如下：</span>
+						</p>
+						<p class="c0">
+							<span class="c1">（1）授权人在线完成抖音用户注册并使用抖音服务时，即为授权人已确认理解、同意并适用《</span>
+							<a id="id.30j0zll"></a>
+							<a id="id.gjdgxs"></a>
+							<span class="c2 c1">抖音—用户服务协议及隐私保护政策》及其他相关规则。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（2）授权人提供的信息（包括但不限于授权人的姓名、性别、年龄、身份证号码、照片、图片、音乐作品相关信息等）是真实、完整、合法的。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（3）授权人未与其他自然人、法人或其他组织签订任何限制授权人参加本授权或实施与本授权有关的一切行为的协议（包括但不限于词曲、唱片、演唱、经纪、影视合约）；或虽签订协议但已取得签约相对人的明确同意，同意授权人参加本授权并能独立实施与本授权有关的一切行为。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（4）授权作品在本授权前未进行过于本授权冲突的其他授权，并且在本授权结束之前不会将同一作品用于于本授权冲突的其他授权及活动。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（5） 如因授权作品违反法律法规、政策规章、公序良俗、存在权利瑕疵或侵犯了第三方的合法权益（包括但不限于著作权、专利权、商标权、肖像权、隐私权、名誉权 等）而导致被授权人或与被授权人合作的其他单位面临任何第三方的索赔、诉讼、投诉；或者使被授权人或者与被授权人合作的其他单位因此遭受任何名誉、声誉或 者财产上的损失，授权人将积极地采取一切可能采取的措施，以保证被授权人及与被授权人合作的其他单位免受上述索赔、诉讼、投诉的影响，同时对被授权人或与 被授权人合作的其他单位因此遭受的直接或间接经济损失承担全部赔偿责任。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">二、【授权内容】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">2.1授权内容：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（1） 授权人将授权作品，包括词作品、曲作品、录音制品（包含相关词曲权利），整首及部分片段（根据授权人音乐上传的具体情况来判断是整首授权还是部分授权）的 著作权及其邻接权，包括信息网络传播权、放映权、广播权、复制权、发行权、表演权、改编权、表演者权、录音录像制作者权，及行使该权利所必需的相关权利独 家授予被授权人。并且，授权人明确知悉以上授权是其能够进行本授权的前提，且确认并同意前述权利不会授权给与抖音相同或类似的其他任何平台或公司。</span>
+						</p>
+						<a id="id.1fob9te"></a>
+						<a id="id.3znysh7"></a>
+						<p class="c0">
+							<span class="c1 c2">（2）针对上述授权内容，被授权人有权以自己的名义制止、打击侵权和盗版行为，包括但不限于申请证据保全、财产保全、行政投诉、刑事自诉、提起民事诉讼、上诉、申请执行、和解、获得赔偿金等。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">2.2授权使用范围：</span>
+							<span class="c5">任何站内、站外，线上、线下，大众媒体、自媒体等。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">2.3授权性质：</span>
+							<span class="c5">免费、排他（排除同类平台）</span>
+							<span class="c2 c1">、可再许可（通过多层次）、可撤销（须提前90天书面通知）的授权。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">2.4授权使用方式：</span>
+							<span class="c5">被授权人及其平台用户有权（1）播放试听授权内容；（2）在抖音内作为背景音乐使用授权内容；（3）在被授权人及其关联公司平台（包括但不限于平台名称为 “今日头条”、“西瓜视频”、“火山”、“Tik Tok”、“Vigo”、“Faceu激萌”）使用；</span>
+							<span class="c1">（3）利用授权内容作出的资料（包括音视频等）单独和/或整合在授权范围内进行播放、推广、转发、分享等</span>
+							<span class="c5">； （4）利用授权内容针对抖音平台做宣传、推广、广告使用；（5）被授权人进行商业化使用（该等商业化使用指有偿提供给平台广告主作为背景音乐使用）和在电 信运营商平台（如中移动、联通、电信等）所有电信类产品（彩铃、振铃、全曲、IVR等）接入进行收益，该项下商业化使用和电信类产品的收益，被授权人有权 收取不少于净收入的15%作为运营代理服务费。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">2.5授权地域范围：</span>
+							<span class="c5">全世界范围内。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">2.6授权期限：</span>
+							<span class="c5">自本协议生效之日起永久，且生效之日起一年后可以提前90天书面通知的方式撤销授权，生效之日起一年内不得撤销授权。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">2.7授权特别规定：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（1）在授权期间，被授权人有权对抖音及被授权人其他平台的名称进行单方变更（包括但不限于更名、新增等），变更后的平台同样适用本协议。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（2）授权人确认并同意，被授权人有权依其产品或平台的运营需要，安排或指定其关联公司、继承公司或其认可的第三方公司（“继承公司”）继续运营被授权人的平台，而无须另行取得授权人书面同意或确认。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">三、【违约责任】</span>
+						</p>
+						<p class="c0" id="h.2et92p0">
+							<span class="c1">任何一方违约的，需按协议约定或法律规定向非违约方承担违约赔偿责任。授权人未能提前</span>
+							<span class="c1 c6">90天</span>
+							<span class="c2 c1">以书面形式通知被授权人而与其他唱片公司或其他任何公司、机构、个人签约或授权的，属授权人违约，除继续履行本协议外，授权人应向被授权人支付相当于授权人所获报酬等总收入30%的违约金，且违约金最少不低于人民币二十万元。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">四、【未成年人使用条款】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">4.1若您为未成年人，应在监护人监护、指导下阅读本协议和使用本服务。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">4.2未成年人用户涉世未深，容易被网络虚象迷惑，且好奇心强，遇事缺乏随机应变的处理能力，很容易被别有用心的人利用而又缺乏自我保护能力。因此，未成年人用户在使用本服务时应注意以下事项，提高安全意识，加强自我保护：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（1）认清网络世界与现实世界的区别，避免沉迷于网络，影响日常的学习生活；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（2）填写对外公开的个人资料时，加强个人保护意识，以免不良分子对个人生活造成骚扰；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（3）在监护人或老师的指导下，学习正确使用网络；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（4）避免陌生网友随意会面或参与联谊活动，以免不法分子有机可乘，危及自身安全。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">（5）在监护人的监护和授权下使用涉及付费类的服务。</span>
+						</p>
+						<p class="c0">
+							<span class="c1">4.3未成年人在无监护人监护、指导或监护人未尽到监护、指导义务的情况下，自行阅读本协议和使用本服务，由此对未成年人本人或其家庭或他人带来的不利后果或损失，均由该未成年人及其家长或监护人承担，公司不对未成年人该行为产生的后果或损失承担任何责任。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">五、【保密条款】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">5.1授权人因进行本授权而直接或间接获得的与本授权有直接或间接关联的一切信息，均负有保密的义务。未经公司书面同意，不得以泄露、告知、公布、发表、出版、传授、转让或其他任何形式，使任何第三方知悉属于被授权人的一切秘密信息。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">5.2本授权终止后，授权人仍对其在活动期间所知悉的属于公司的秘密信息具有保密义务。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">六、【不可抗力及免责事由】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.1 您理解并同意，在使用本服务的过程中，可能会遇到不可抗力等风险因素，使本服务发生中断。不可抗力是指不能预见、不能克服并不能避免且对一方或双方造成重 大影响的客观事件，包括但不限于自然灾害如洪水、地震、瘟疫流行和风暴等以及社会事件如战争、动乱、政府行为等。出现上述情况时，公司将努力在第一时间与 相关单位配合，及时进行修复，但是由此给您造成的损失公司在法律允许的范围内免责。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.2在法律允许的范围内，公司对以下情形导致的服务中断或受阻不承担责任：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（1）受到计算机病毒、木马或其他恶意程序、黑客攻击的破坏；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（2）用户或的电脑软件、系统、硬件和通信线路出现故障；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（3）用户操作不当；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（4）用户通过非授权的方式使用本服务；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（5）其他无法控制或合理预见的情形。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.3您理解并同意，在使用本服务的过程中，可能会遇到网络信息或其他用户行为带来的风险，公司不对任何信息的真实性、适用性、合法性承担责任，也不对因侵权行为给您造成的损害负责。这些风险包括但不限于：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（1）来自他人匿名或冒名的含有威胁、诽谤、令人反感或非法内容的信息；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（2）因使用本协议项下的服务，遭受他人误导、欺骗或其他导致或可能导致的任何心理、生理上的伤害以及经济上的损失；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（3）其他因网络信息或用户行为引起的风险。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.4您理解并同意，本服务并非为某些特定目的而设计，包括但不限于核设施、军事用途、医疗设施、交通通讯等重要领域。如果因为软件或服务的原因导致上述操作失败而带来的人员伤亡、财产损失和环境破坏等，公司不承担法律责任。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.5公司依据本协议约定获得处理违法违规内容的权利，该权利不构成公司的义务或承诺，公司不能保证及时发现违法行为或进行相应处理。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">6.6在任何情况下，您不应轻信借款、索要密码或其他涉及财产的网络信息。涉及财产操作的，请一定先核实对方身份，并请经常留意公司有关防范诈骗犯罪的提示。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">七、【协议的生效与变更】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">7.1您使用本服务即视为您已阅读本协议并接受本协议的约束。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">7.2公司有权在必要时修改本协议条款。您可以在相关服务页面查阅最新版本的协议条款。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">7.3协议条款变更后，如果您继续使用提供的软件或服务，即视为您已接受修改后的协议。如果您不接受修改后的协议，应当停止使用公司提供的软件或服务。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">八、【服务的变更、中断、终止】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">8.1您理解并同意公司可能会对服务内容进行变更，也可能会中断、中止或终止服务。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">8.2如发生下列任何一种情形，公司有权不经通知而中断或终止向您提供的服务：</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（1）根据法律规定您应提交真实身份等信息，而您提供的个人资料不真实、或与注册时信息不一致又未能提供合理证明；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（2）您违反相关法律法规或本协议的约定；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（3）按照法律规定或主管部门的要求；</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">（4）出于安全的原因或其他必要的情形。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">8.3您有责任自行备份存储在本服务中的数据。如果您的服务被终止，公司可以从服务器上永久地删除您的数据。本服务终止后，公司没有义务向您返还数据。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">九、【争议解决与适用法律】</span>
+						</p>
+						<p class="c0">
+							<span class="c3">9.1双方应严格履行本协议，因本协议履行产生争议的，双方应友好协商，协商不成时，任何一方均有权向</span>
+							<span class="c1">北京市海淀区人民法院</span>
+							<span class="c2 c3">申请诉讼方式解决。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">9.2本协议的订立、履行、争议解决与解释均适用中华人民共和国大陆地区法律。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">十、【其他注意事项】</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">10.1因第三方的原因，导致授权作品被迫中止本授权在抖音及相关平台使用的，授权人因此所受到的损失应直接向第三方要求赔偿，被授权人不负任何赔偿责任。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c1">10.2 授权作品均为授权人自愿提供，因此，该授权作品的著作权及内容的真实性、合法性均由授权人自行负责。被授权人对所有授权作品的著作权及内容的真实性、合法 性不提供任何明示或暗示的担保，被授权人对于任何个人、法人或其他组织因使用授权作品而引起的任何形式的损失，包括但不限于直接的、间接的、偶然的、惩罚 性的损失，不承担任何责任。</span>
+						</p>
+						<p class="c0">
+							<span class="c2 c3">10.3本协议任何一方未能及时行使本协议项下的权利不应被视为放弃该权利，也不影响该方在将来行使该权利。</span>
+						</p>
+						<p class="c0" id="h.tyjcwt">
+							<span class="c2 c3">10.4如果本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，或违反任何适用的法律，则该条款被视为删除，不影响本协议的其余条款的法律效力。</span>
+						</p>
+						<p class="c0">
+							<span class="c3">10.5本协议更新于</span>
+							<span class="c3 c6">2018年8月21日</span>
+							<span class="c2 c3">。</span>
+						</p>
+						<p></p>
+					</div>
+					<div class="agreement-step-button-group">
+						<input  class="agreement-button-disabled" disabled="disabled" value="我已阅读并接受《参赛协议》" id="agreeSubmit" type="button">
+						<div class="step-button" id="agreeHideBtn">取消</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" th:inline="javascript">
+	
+		$("#agreeSubmit").click(function()
+		{
+			var username = $("#stage_name").val();
+			var name = $("#name").val();
+			var wechat = $("#wechat").val();
+			var card = $("#idCard").val();
+			
+			$.post(
+				//action地址
+				[[@{~/addUser}]],
+				//数据
+				{"username":username,"name":name,"wechat":wechat,"card":card},
+				//回调函数
+				function(data)
+				{
+					window.location=[[@{~/toregister-add-music}]]
+				},
+				//数据格式
+				"json"
+				)
+		})
+	
+		$(function() {
+        require('web:common/utils/promise.polyfill');
+        require('web:page/musician/apply/verify/verify');
+    })
+    </script>
+		<script>window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+        tags: {
+            bid: 'douyin_web',
+            pid: 'musician_verify_upload'
+        }
+    }).install();</script>
+	</div>
+	<script>window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+        tags: {
+            bid: 'douyin_web',
+            pid: 'musician_verify_upload'
+        }
+    }).install();</script>
+	<script src="register_files/index_7a47cdc.js"></script>
+	<script src="register_files/es6-promise.js"></script>
+	<script src="register_files/promise.js"></script>
+	<script src="register_files/form_ebcf55b.js"></script>
+	<script src="register_files/file_f9a5ca7.js"></script>
+	<script src="register_files/toast_d6fd98c.js"></script>
+	<script src="register_files/verify_7efc371.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define("web:common/utils/promise.polyfill",function(i){i("web:common/utils/es6-promise.min").polyfill()});

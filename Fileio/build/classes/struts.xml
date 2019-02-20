@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+	
+<struts>
+
+	<!-- 开启动态方法的调用 -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+	<!-- 让spring帮我们创建action -->
+	<constant name="struts.objectFactory" value="spring"></constant>
+
+
+	<!-- 让spring帮我们创建action -->
+	<package name="Fileio" namespace="/" extends="struts-default">
+		<!-- 允许所有的方法 -->	
+		<global-allowed-methods>regex:.*</global-allowed-methods>
+		<!-- 配置action TODO -->
+		
+		<action name="FileAction_*" class="com.Gary.web.FileAction" method="{1}" >
+			<result name="index">/index.jsp</result>
+			<result name="default">/default.jsp</result>
+			<interceptor-ref name="fileUpload">
+				<!-- 允许文件类型 -->
+				<param name="allowedType">image/bmp,image/x-png,image/gif,image/jpeg</param>
+				<!-- 允许文件最大的大小 -->
+				<param name="maximumSize">5M</param>
+			</interceptor-ref>
+		<!-- 使用默认的栈 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			
+		</action>
+		
+	</package>
+
+
+</struts>

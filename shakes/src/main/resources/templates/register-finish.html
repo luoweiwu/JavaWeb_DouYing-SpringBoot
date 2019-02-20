@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script async="" src="register-finish_files/analytics.js"></script>
+<script src="register-finish_files/slardar.js"></script>
+<script>
+	window.Slardar && window.Slardar.install({
+		sampleRate : 1,
+		bid : 'douyin_web',
+		pid : 'musician_apply_success',
+		ignoreAjax : [],
+		ignoreStatic : []
+	});
+</script>
+<title>&nbsp;抖音音乐人</title>
+<meta charset="utf-8">
+<meta http-equiv="”Cache-Control”" content="”no-transform”">
+<meta http-equiv="”Cache-Control”" content="”no-siteapp”">
+<meta name="baidu-site-verification" content="szjdG38sKy">
+<meta name="keywords" content="抖音看见音乐,看见音乐计划,抖音音乐人,原创音乐,看见音乐计划官网">
+<meta name="description" content="抖音看见音乐计划,你的音乐,我看得见">
+<link rel="shortcut icon" href="https://s3.bytecdn.cn/aweme/resource/web/static/image/logo/favicon_v2_7145ff0.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<link rel="dns-prefetch" href="https://s3.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3a.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s3b.bytecdn.cn/">
+<link rel="dns-prefetch" href="https://s0.pstatp.com/">
+<link rel="dns-prefetch" href="https://s1.pstatp.com/">
+<link rel="dns-prefetch" href="https://s2.pstatp.com/">
+<link rel="stylesheet" href="register-finish_files/base_4a834a9.css">
+<link rel="stylesheet" href="register-finish_files/base_ce73669.css">
+<!--[if IE]><script src="//s3a.bytecdn.cn/aweme/resource/web/static/script/lib/fix-ie8_e8a0650.js"></script><![endif]-->
+<script src="register-finish_files/core_1f49c51.js"></script>
+<script src="register-finish_files/jquery.js"></script>
+<script src="register-finish_files/raven_8c2f9e8.js"></script>
+<script>
+	window.PAGEVIEW_NAME = '/musician_apply_success/';
+</script>
+<script>
+	// BA全局变量
+	var baAccount = window.AME_BA_ID || 'fe557d1f75199e';
+	var baevent = function() {
+	};
+
+	(function() {
+		var sampleRate = 100; // 采样比例，即上报量占总流量的百分比
+
+		!function(t, e, a, n, s, c) {
+			t.ToutiaoAnalyticsObject = s, t[s] = t[s] || function() {
+				(t[s].q = t[s].q || []).push(arguments)
+			}, t[s].t = 1 * new Date, t[s].s = c;
+			var i = e.createElement(a);
+			i.async = 1, i.src = n, e.getElementsByTagName("head")[0]
+					.appendChild(i)
+		}(window, document, "script",
+				"//s3.bytecdn.cn/ta/resource/v0/analytics.js", "ba");
+
+		ba('create', baAccount, {
+			'sampleRate' : sampleRate
+		});
+		ba('send', 'pageview');
+
+		baevent = function(category, action, label, value) {
+			console.log("ba:" + category + "," + action + "," + label);
+			if (category != 'event') {
+				ba('send', 'event', category, action, label,
+						typeof value !== 'undefined' ? value : 1);
+			}
+		};
+	})();
+</script>
+<script async="" src="register-finish_files/analytics_002.js"></script>
+<script>
+	var gaAccount = window.AME_GA_ID || 'UA-75850242-4';
+
+	var _gaq = _gaq || [];
+	var gaqpush = function() {
+	};
+	var gaevent = function() {
+	};
+	var gapageview = function() {
+	};
+	var trackPV = gapageview;
+
+	var sampleRate = 20;
+
+	function initGA() {
+
+		if (sampleRate && gaAccount) {
+			window.onerror = function(message, file, line) {
+				var msg = message, f = file, l = line;
+				if (typeof message === 'object') {
+					msg = message.message;
+					f = message.fileName;
+					l = message.lineNumber;
+				}
+				var sFormattedMessage = '[' + f + ' (' + l + ')]' + msg;
+				window.gaevent ? gaevent('Exceptions', sFormattedMessage,
+						location.pathname + '::::' + navigator.userAgent) : '';
+			};
+
+			var test_channel = "", test_version = "", utm_source = "";
+
+			// var ua = navigator.userAgent;
+
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script',
+					'//www.google-analytics.com/analytics.js', 'ga');
+
+			// Replace with your property ID.
+			ga('create', gaAccount, {
+				'sampleRate' : sampleRate
+			});
+
+			//Init GA Function
+			gapageview = function(pageName) {
+				ga('send', 'pageview', pageName);
+				console.log('ga:pageview', pageName);
+			};
+
+			gaqpush = function(ga_event, ga_label) {
+				gaevent('event', ga_event, ga_label);
+			};
+
+			gaevent = function(category, action, label, value) {
+				if (test_channel.indexOf(action) > -1)
+					label = label + test_version;
+				console.log("ga:" + category + "," + action + "," + label);
+				if (category != 'event') {
+					ga('send', 'event', category, action, label,
+							typeof value !== "undefined" ? value : 1);
+				}
+				if (typeof window.baevent == "function") {
+					baevent(category, action, label, value);
+				}
+			};
+
+			gapageview(window.PAGEVIEW_NAME);
+
+			$("html")
+					.on(
+							'click',
+							'[ga_event]',
+							function(e) {
+								var $this = $(this);
+								var ga_category = $this.attr('ga_category')
+										|| 'event';
+								var ga_event = $this.attr('ga_event');
+								var ga_label = $this.attr('ga_label');
+								gaevent(ga_category, ga_event, ga_label);
+								if ($this.is('a')) {
+									var href = $this.attr('href') || '', target = this.target;
+									if (!(href[0] === '#'
+											|| target === "_blank" || e
+											.isDefaultPrevented())) {
+										setTimeout(function() {
+											location.href = href
+										}, 400);
+										return false
+									}
+								}
+							});
+		}
+	}
+
+	initGA();
+</script>
+<link rel="stylesheet" href="register-finish_files/index_db26f14.css">
+</head>
+<body>
+	<div class="main-content-block">
+		<div class="header">
+			<div class="header-container">
+				<a href="https://musician.douyin.com/">
+					<div class="header-logo">
+						<img src="register-finish_files/logo_08524dd.png" alt="logo">
+					</div>
+				</a>
+				<div class="header-login">
+					<a href="mailto:musician@bytedance.com" class="header-email">
+						<span class="header-email-icon"></span>
+						<span>反馈及举报邮箱 musician@bytedance.com</span>
+					</a>
+					<a href="#" id="loginBtn">
+						<span class="header-user-icon" style="background-image: url(http://p0.pstatp.com/origin/3793/3114521287)"></span>
+						<span>用户522260</span>
+					</a>
+					<a href="https://www.douyin.com/logout/?next=https%3A%2F%2Fwww.douyin.com%2Fmusicianlogout%2F">| 退出登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="common-header">
+			<div class="common-module-container">
+				<div class="common-module">
+					<img src="register-finish_files/icon_1_active_cc77279.png">
+					<p class="common-module-txt">
+						填写资料
+						<span id="verifyStatus" class="verify-status">(审核中)</span>
+					</p>
+				</div>
+				<div class="common-hr"></div>
+				<div class="common-module">
+					<img src="register-finish_files/icon_2_active_5b30557.png">
+					<p class="common-module-txt">提交作品</p>
+				</div>
+				<div class="common-hr"></div>
+				<div class="common-module">
+					<img src="register-finish_files/icon_3_active_7cb7647.png">
+					<p class="common-module-txt">等待审核</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="success">
+				<div class="success-img">
+					<img src="register-finish_files/success_1a88783.png">
+				</div>
+				<p class="success-text">提交成功，请耐心等待审核，7s后将跳转您的作品页面</p>
+				<p class="success-text">通过后，记得用你的音乐拍视频</p>
+				<p class="success-text">扫码查看官方教程，手把手教你抖音宣歌小窍门</p>
+				<p class="tutorial-QRcode">
+					<img src="register-finish_files/QRcode-2_537c624.png" alt="QRcode">
+				</p>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				setTimeout(function() {
+					location.href = '/findVideo';
+				}, 7000);
+			})
+		</script>
+		<script>
+			window.Raven
+					&& Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+						tags : {
+							bid : 'douyin_web',
+							pid : 'musician_apply_success'
+						}
+					}).install();
+		</script>
+	</div>
+	<script>
+		window.Raven && Raven.config('//key@m.toutiao.com/log/sentry/v2/96', {
+			tags : {
+				bid : 'douyin_web',
+				pid : 'musician_apply_success'
+			}
+		}).install();
+	</script>
+	<script src="register-finish_files/index_7a47cdc.js"></script>
+</body>
+</html>
