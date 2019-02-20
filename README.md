@@ -9,9 +9,10 @@ shakes  使用Tomact 8081端口 实现将视频上传到腾讯云服务器
 Fileio项目使用的SSH框架，shakes项目使用的SpringBoot框架
 
 在MySQL中创建两个数据库`uploadio`和`shakes`，`shakes`设置为Set as Default Schema
+数据库的表会自己自动生成
 
-
+附
 JavaWeb-SpringBoot_一个类实现腾讯云SDK发送短信  https://www.cnblogs.com/1138720556Gary/p/10340119.html
-
+JavaWeb-SpringBoot_腾讯云点播服务之视频的上传-demo https://www.cnblogs.com/1138720556Gary/p/10350221.html
 
 
