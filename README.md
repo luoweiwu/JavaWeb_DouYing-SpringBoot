@@ -6,6 +6,8 @@ Gary https://www.cnblogs.com/1138720556Gary/p/10354269.html
 Fileio  使用Tomact 8081端口 实现将图片上传到自己制作的文件服务器
 shakes  使用Tomact 8081端口 实现将视频上传到腾讯云服务器
 
+Fileio项目使用的SSH框架，shakes项目使用的SpringBoot框架
+
 在MySQL中创建两个数据库`uploadio`和`shakes`，`shakes`设置为Set as Default Schema
 
 
